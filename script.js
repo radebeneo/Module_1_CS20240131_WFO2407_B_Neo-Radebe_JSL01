@@ -8,8 +8,21 @@ function validateSyntax() {
         
         // Check if input starts with 'pet_'
         if (input.startsWith('pet_')) {
+
             // Remove 'pet_' from the beginning
             let remainingString = input.slice(4);
+
+            // Find the position of the first letter (after the numbers)
+            let firstLetterIndex = -1;
+
+            for (let i = 0; i < remainingString.length; i++) {
+                
+                // Check if the character is not a number
+                if (isNaN(remainingString[i])) {
+                    firstLetterIndex = i;
+                    break;
+                }
+            }
 
         }
 
