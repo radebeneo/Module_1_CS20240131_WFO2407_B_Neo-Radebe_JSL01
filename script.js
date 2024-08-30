@@ -16,12 +16,22 @@ function validateSyntax() {
             let firstLetterIndex = -1;
 
             for (let i = 0; i < remainingString.length; i++) {
-                
+
                 // Check if the character is not a number
-                if (isNaN(remainingString[i])) {
+                if (isNaN(remainingString[i])){
                     firstLetterIndex = i;
                     break;
                 }
+            }
+
+            // Check if we found a letter and there are numbers before it
+            if (firstLetterIndex > 0 && firstLetterIndex < remainingString.length){
+            result = 'Valid Syntax';
+            document.getElementById('result').className = 'valid';
+            } 
+            else {
+                result = 'Invalid Syntax';
+                document.getElementById('result').className = 'invalid';
             }
 
         }
