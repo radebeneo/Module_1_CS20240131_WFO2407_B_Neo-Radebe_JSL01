@@ -33,7 +33,11 @@ function validateSyntax() {
                 result = 'Invalid Syntax';
                 document.getElementById('result').className = 'invalid';
             }
+        }
 
+        else {
+            result = 'Invalid Syntax';
+            document.getElementById('result').className = 'invalid';
         }
 
     document.getElementById('result').innerText = result;
