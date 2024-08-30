@@ -8,7 +8,9 @@ function validateSyntax() {
         
         // Check if input starts with 'pet_'
         if (input.startsWith('pet_')) {
-            
+            // Remove 'pet_' from the beginning
+            let remainingString = input.slice(4);
+
         }
 
     document.getElementById('result').innerText = result;
